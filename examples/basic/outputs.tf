@@ -3,10 +3,6 @@ output "ids" {
   value       = "${module.ec2.id}"
 }
 
-output "ids_t2" {
-  description = "List of IDs of t2-type instances"
-  value       = "${module.ec2_with_t2_unlimited.id}"
-}
 
 output "public_dns" {
   description = "List of public DNS names assigned to the instances"
@@ -36,9 +32,4 @@ output "instance_public_dns" {
 output "credit_specification" {
   description = "Credit specification of EC2 instance (empty list for not t2 instance types)"
   value       = "${module.ec2.credit_specification}"
-}
-
-output "credit_specification_t2_unlimited" {
-  description = "Credit specification of t2-type EC2 instance"
-  value       = "${module.ec2_with_t2_unlimited.credit_specification}"
 }
